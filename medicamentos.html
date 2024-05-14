@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registro de Medicamentos</title>
+<link rel="stylesheet" href="stylemed.css">
+</head>
+<header class="header">
+    <div class="logo">
+        <img src="https://i.pinimg.com/736x/af/ea/0a/afea0a784e2efa4bcc3cb32631657d42.jpg">
+    </div>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="index.html">Página principal</a></li>
+            <li><a href="signos_vitales.html">Signos vitales</a></li>
+            <li><a href="recarga.html">Recarga de medicamentos</a></li>
+        </ul>
+    </nav>
+<a href="signup.html" class="btn"><button>Sign up</button></a>
+</header>
+<body>
+    <div class="Form">
+        <h2>Formulario de Registro de Medicamentos</h2><br>
+        <form id="med-form">
+          <label for="med-name">Nombre del Medicamento:</label>
+          <input type="text" id="med-name" name="med-name" required><br>
+      
+          <label for="first-dose">Hora de la Primera Toma:</label>
+          <input type="time" id="first-dose" name="first-dose" required><br>
+      
+          <label for="frequency">Frecuencia de Toma (en horas):</label>
+          <input type="number" id="frequency" name="frequency" min="1" required><br>
+      
+          <label for="duration">Duración del Tratamiento (en días):</label>
+          <input type="number" id="duration" name="duration" min="1" required><br>
+            <a href="termscond.html"><legend>He leído y acepto los términos y condiciones</legend></a>
+            <label><input type="radio" name="radio" value="yes" />Sí</label><br>
+            <label><input type="radio" name="radio" value="yes" />No</label><br>
+          <input type="button" value="Registrar Medicamento" onclick="registerMedication()">
+        </form>
+    </div>
+
+<script>
+        function registerMedication() {
+            var medName = document.getElementById('med-name').value;
+
+            alert('Medicamento ' + medName + ' registrado con éxito!');
+
+            document.getElementById('med-name').value = '';
+
+        }
+</script>
+</body>
+</html>

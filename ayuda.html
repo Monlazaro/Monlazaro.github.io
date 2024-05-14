@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayuda</title>
+    <link rel="stylesheet" href="stylehelp.css">
+</head>
+<header class="header">
+    <div class="logo">
+      <img src="https://i.pinimg.com/736x/af/ea/0a/afea0a784e2efa4bcc3cb32631657d42.jpg">
+    </div>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="index.html">Página principal</a></li>
+            <li><a href="medicamentos.html">Toma de medicamentos</a></li>
+            <li><a href="signos_vitales.html">Signos vitales</a></li>
+            <li><a href="recarga.html">Recarga de medicamentos</a></li>
+        </ul>
+    </nav>
+<a href="signup.html" class="btn"><button>Sign up</button></a>
+</header>
+<body>
+
+<div class="marge">
+    <h1>Preguntas Frecuentes</h1>
+    <br>
+<div class="faq">
+    <div class="question"><b>¿Cómo puedo agregar o modificar los medicamentos que debo tomar?</b></div>
+    <div class="answer">
+        En la sección "Toma de medicamentos" de la aplicación, puedes añadir nuevos medicamentos o editar los existentes. Si necesitas ayuda, consulta el video tutorial donde explicamos este proceso paso a paso.
+    </div>
+</div>
+
+<div class="faq">
+    <div class="question"><b>¿Qué debo hacer si no recibo los recordatorios?</b></div>
+    <div class="answer">
+        Asegúrate de que las notificaciones estén activadas en la configuración de tu dispositivo y en la aplicación. Si el problema persiste, contáctanos para obtener ayuda.
+    </div>
+</div>
+
+<div class="faq">
+    <div class="question"><b>¿Cómo puedo llevar un registro de mis signos vitales?</b></div>
+    <div class="answer">
+        Utiliza la función "Signos vitales" en la aplicación para ingresar tus datos. Puedes ver el historial y las tendencias de tus mediciones en cualquier momento.
+    </div>
+</div>
+
+<div class="faq">
+    <div class="question"><b>¿Qué pasa si cambio de teléfono o dispositivo?</b></div>
+    <div class="answer">
+        Tus datos están seguros con nosotros. Solo necesitas instalar la aplicación en tu nuevo dispositivo y acceder con tu cuenta para recuperar toda tu información.
+    </div>
+</div>
+
+<div class="faq">
+    <div class="question"><b>¿Puedo usar LuMi Meds Reminder en mi computadora?</b></div>
+    <div class="answer">
+        ¡Por supuesto!, puedes usar cualquiera de nuestros servicios desde este sitio web.
+    </div>
+</div>
+
+<script>
+    const questions = document.querySelectorAll('.question');
+
+    questions.forEach(question => {
+        question.addEventListener('click', () => {
+            const answer = question.nextElementSibling;
+            if (answer.style.display === 'block') {
+                answer.style.display = 'none';
+            } else {
+                document.querySelectorAll('.answer').forEach(ans => {
+                    ans.style.display = 'none';
+                });
+                answer.style.display = 'block';
+            }
+        });
+    });
+</script>
+</div>
+    <h1>Video tutorial - Uso de la página web</h1>
+    <br>
+    <div class="video">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/hCSQF7eK8kI?si=7aWzeeE4C4Mov94Z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="esp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LuMi Meds Reminder</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/f757146b23.js" crossorigin="anonymous"></script>
+</head>
+<header class="header">
+        <div class="logo">
+          <img src="https://i.pinimg.com/736x/af/ea/0a/afea0a784e2efa4bcc3cb32631657d42.jpg">
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="medicamentos.html">Toma de medicamentos</a></li>
+                <li><a href="signos_vitales.html">Signos vitales</a></li>
+                <li><a href="recarga.html">Recarga de medicamentos</a></li>
+            </ul>
+        </nav>
+    <a href="signup.html" class="btn"><button>Sign up</button></a>
+    </header>
+
+<body>
+  <br>
+    <table class="table" align="left" width="500">
+        
+      <tr>
+        <td><h1>Sobre Nosotros</h1></td>
+      </tr>
+        <tr>
+          <td><p align="justify">¡Hola! Nosotros somos LuMi Meds Reminder, una página web creada para recordarle a pacientes con enfermedades crónicas, y no crónicas, cuándo tomar sus medicamentos, también le permite al paciente registrar sus signos vitales para llevar un mejor control a lo largo de todo el tratamiento, y de igual forma, le avisa cuándo es bueno ir a comprar nuevos medicamentos antes de que se acaben.</td></p>
+          </tr>
+    </table>
+        
+    <div id="carrusel" class="carrusel">
+        <button class="flecha izquierda" onclick="CambiarDiapositivaB()">&#10094;</button>
+        <div id= "image-container"> </div>
+        <button class="flecha derecha" onclick="CambiarDiapositivaA()">&#10095;</button>
+    </div>
+        
+      </div>
+      
+      <script>
+        const IMAGENES = ['./imagenes/pag1.png', './imagenes/pag2.png', './imagenes/pag3.png', './imagenes/pag4.png']
+        let indiceActual = 0;
+
+        const container = document.getElementById('image-container');
+        const img = document.createElement('img');
+        
+        function mostrarDiapositiva(indiceActual) {
+          img.src = IMAGENES[indiceActual]
+          container.appendChild(img)
+        }
+        
+        mostrarDiapositiva(0);
+
+        function CambiarDiapositivaA(){
+          if(indiceActual >= IMAGENES.length - 1 || indiceActual < 0) {
+            indiceActual = 0;
+          } else {
+            indiceActual += 1;
+            console.log(indiceActual)
+          }
+
+          mostrarDiapositiva(indiceActual);
+          
+        }
+
+        function CambiarDiapositivaB(){
+          if(indiceActual <= 0) {
+            indiceActual = IMAGENES.length - 1;
+          } else {
+            indiceActual -= 1;
+            console.log(indiceActual)
+          }
+          mostrarDiapositiva(indiceActual);
+        }
+      </script>
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <footer>
+    <div class="container">
+        <div class="footer-content">
+          <h3>Contáctanos</h3>
+          <p>Correo</p>
+          <p>lumimedsmx@gmail.com</p>
+          <p>Teléfono</p>
+          <p>442 284 0162</p>
+          <p>Dirección: </p>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3736.553784104701!2d-99.90992949711983!3d20.52451053216409!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d376008eea2619%3A0x165c4fbc788d8395!2sCalle%20Emiliano%20Zapata%2057%2C%20Adolfo%20L%C3%B3pez%20Mateos%2C%2076750%20Tequisquiapan%2C%20Qro.!5e0!3m2!1ses-419!2smx!4v1714867060094!5m2!1ses-419!2smx" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="footer-content">
+            <h3>Enlaces rápidos</h3>
+            <ul class="list">
+              <li><a href="avisopriv.html"><font color="#F8F9FB">Aviso de Privacidad</font></a></li>
+              <li><a href="termscond.html"><font color="#F8F9FB">Términos y condiciones</font></a></li>
+              <li><a href="ayuda.html"><font color="#F8F9FB">¿Necesitas ayuda?</font></a></li>
+              <li><a href="clientes.html"><font color="#F8F9FB">Opinión de clientes</font></a></li>
+            </ul>
+        </div>
+        <div class="footer-content">
+          <h3>Síguenos</h3>
+          <ul class="social-icons">
+            <li><a href="https://www.facebook.com/lumi.meds.reminder?mibextid=ZbWKwL"><i class="fab fa-facebook"></i></a></li>
+            <li><a href="https://www.instagram.com/lumi_meds_reminder?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i class="fab fa-instagram"></i></a></li>
+            <li><a href="https://twitter.com/LuMiMedsRemind"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/monserrat-gonz%C3%A1lez-l%C3%A1zaro-26195a09m/"><i class="fab fa-linkedin"></i></a></li>
+          </ul>
+        </div>
+    </div>
+    <div class="bottom-bar">
+        <p>&copy; 2024 LuMi Meds Reminder . Todos los derechos reservados</p>
+    </div>
+  </footer>     
+</body>
+</html>

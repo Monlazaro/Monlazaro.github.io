@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recordatorio de recarga</title>
+  <link rel="stylesheet" href="stylerga.css">
+</head>
+<header class="header">
+    <div class="logo">
+      <img src="https://i.pinimg.com/736x/af/ea/0a/afea0a784e2efa4bcc3cb32631657d42.jpg">
+    </div>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="index.html">Página principal</a></li>
+            <li><a href="medicamentos.html">Toma de medicamentos</a></li>
+            <li><a href="signos_vitales.html">Signos vitales</a></li>
+        </ul>
+    </nav>
+<a href="signup.html" class="btn"><button>Sign up</button></a>
+</header>
+<body>
+  <form id="med-form">
+    <h2>Registro de Medicamentos</h2><br>
+    <label for="med-name">Nombre del Medicamento:</label>
+    <input type="text" id="med-name" name="med-name" required><br><br>
+
+    <label for="med-amount">Cantidad Recetada:</label>
+    <input type="number" id="med-amount" name="med-amount" min="1" required><br><br>
+
+    <label for="pills-per-day">Pastillas por Día:</label>
+    <input type="number" id="pills-per-day" name="pills-per-day" min="1" required><br><br>
+
+    <label for="treatment-days">Días de Tratamiento:</label>
+    <input type="number" id="treatment-days" name="treatment-days" min="1" required><br><br>
+
+    <input type="button" value="Registrar Medicamento" onclick="registerMedication()">
+  </form>
+
+  <script>
+    function registerMedication() {
+      var medName = document.getElementById('med-name').value;
+      var medAmount = document.getElementById('med-amount').value;
+      var pillsPerDay = document.getElementById('pills-per-day').value;
+      var treatmentDays = document.getElementById('treatment-days').value;
+
+      // Aquí deberías agregar la lógica para almacenar estos datos en tu base de datos
+      // y calcular la fecha de recarga basada en la cantidad recetada y las pastillas por día.
+
+      alert('Medicamento ' + medName + ' registrado con éxito!');
+    }
+  </script>
+</body>
+</html>

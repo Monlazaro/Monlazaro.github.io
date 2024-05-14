@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Signos vitales</title>
+<link rel="stylesheet" href="stylesv.css">
+</head>
+<header class="header">
+    <div class="logo">
+        <img src="https://i.pinimg.com/736x/af/ea/0a/afea0a784e2efa4bcc3cb32631657d42.jpg">
+    </div>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="index.html">Página principal</a></li>
+            <li><a href="medicamentos.html">Toma de medicamentos</a></li>
+            <li><a href="recarga.html">Recarga de medicamentos</a></li>
+        </ul>
+    </nav>
+<a href="signup.html" class="btn"><button>Sign up</button></a>
+</header>
+<body>
+    <form action="/submit-vitals" method="post">
+        <label for="blood-pressure">Presión Arterial:</label>
+        <input type="text" id="blood-pressure" name="blood-pressure" required>
+      
+        <label for="heart-rate">Frecuencia Cardíaca:</label>
+        <input type="number" id="heart-rate" name="heart-rate" required>
+      
+        <label for="glucose-level">Nivel de Glucosa en Sangre:</label>
+        <input type="number" id="glucose-level" name="glucose-level" required>
+      
+        <button id="submit" onclick="showAlert()"> Enviar </button>
+      </form>  
+      <script>
+          function showAlert() {
+            alert('Signos vitales registrados con éxito.')
+          }
+    </script>
+</body>
+</html>

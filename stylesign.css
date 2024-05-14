@@ -1,0 +1,86 @@
+/* Estilo para el contenido HTML */
+.header .btn button{
+    font-weight: 700;
+    color: #1b3039;
+    padding: 9px 25px;
+    background: #eceff1;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.header .btn button:hover{
+    background-color: #e2f1f8;
+    color: #ffbc0e;
+    transform: scale(1.1);
+}
+
+body {
+    margin: 80px;
+    font-family: Arial, sans-serif;
+    background-image: url(https://images.pexels.com/photos/593451/pexels-photo-593451.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-size: cover;
+    /* Centra la imagen de fondo vertical y horizontalmente */
+    background-position: center;
+    /* Fija la imagen de fondo para que no se desplace con el contenido */
+    background-attachment: fixed;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2, h3 {
+    text-align: left;
+}
+
+p {
+    text-align: justify;
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    background-color: #eceff1;
+    font-weight: 700;
+    color: #1b3039;
+    border: none;
+    border-radius: 50px;
+    padding: 9px 25px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #e2f1f8;
+    color: #ffbc0e;
+}
+
+/* Cambiar el color de los enlaces */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
